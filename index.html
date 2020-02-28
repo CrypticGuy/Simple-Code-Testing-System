@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'nonce-2726c7f26c'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'nonce-2726c7f26c'">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>Simple Code Testing Utility</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand">BinaryBlood</a>
+      <form class="form-inline">
+          <button id="openFile" type="button" class="btn btn-outline-primary m-1">Open File</button>
+          <button id="runTestCase" type="button" class="btn btn-outline-success m-1">Run Test Case</button>
+      </form>
+    </nav>  
+    <div class="container height-100 pt-5">
+      <div class="row height-75">
+        <div class="col-sm-8"> 
+          <div class="form-group">
+            <label for="comment">Code:</label>
+            <textarea class="form-control" id="code" placeholder="Your code goes here..."></textarea>
+            <!--<pre id="code" data-src="/home/vasu/Programming/simple.py"></pre>-->
+          </div> 
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="comment">Test Case:</label>
+            <textarea class="form-control" id="testCase" placeholder="Your test cases go here..."></textarea>
+          </div>
+        </div>
+      </div> 
+      <div class="row height-25">
+          <div class="col-sm-12 form-group">
+            <label for="comment">Output:</label>
+            <textarea class="form-control" id="output" placeholder="Your output will be shown here..." readonly></textarea>
+          </div> 
+      </div>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script nonce="2726c7f26c">
+      if (typeof module === 'object') {
+        window.module = module; 
+        module = undefined;
+      }
+    </script>
+    <script nonce="2726c7f26c">let $ = require('jquery');</script>
+    <script nonce="2726c7f26c">require('@popperjs/core')</script>
+    <script nonce="2726c7f26c">require('bootstrap');</script>
+    <script src="./renderer.js" nonce="2726c7f26c"></script>
+  </body>
+</html>
